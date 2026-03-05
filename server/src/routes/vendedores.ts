@@ -7,7 +7,7 @@ const router = Router();
 router.get('/', async (_req: Request, res: Response) => {
   try {
     const { data, error } = await supabase
-      .from('vendedores')
+      .from('vendedor')
       .select('id, nombre')
       .order('nombre');
 
@@ -15,8 +15,8 @@ router.get('/', async (_req: Request, res: Response) => {
 
     res.json(data);
   } catch (error) {
-    console.error('Error fetching vendedores:', error);
-    res.status(500).json({ error: 'Failed to fetch vendedores' });
+    console.error('Error fetching vendedor:', error);
+    res.status(500).json({ error: 'Failed to fetch vendedor' });
   }
 });
 

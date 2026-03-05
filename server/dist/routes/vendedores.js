@@ -7,7 +7,7 @@ const router = (0, express_1.Router)();
 router.get('/', async (_req, res) => {
     try {
         const { data, error } = await supabase_js_1.supabase
-            .from('vendedores')
+            .from('vendedor')
             .select('id, nombre')
             .order('nombre');
         if (error)
@@ -15,8 +15,8 @@ router.get('/', async (_req, res) => {
         res.json(data);
     }
     catch (error) {
-        console.error('Error fetching vendedores:', error);
-        res.status(500).json({ error: 'Failed to fetch vendedores' });
+        console.error('Error fetching vendedor:', error);
+        res.status(500).json({ error: 'Failed to fetch vendedor' });
     }
 });
 exports.default = router;

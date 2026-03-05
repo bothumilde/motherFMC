@@ -10,7 +10,7 @@ router.get('/', async (req: Request, res: Response) => {
     const idArea = req.query.area;
 
     let query = supabase
-      .from('categorias')
+      .from('categoria')
       .select('id, id_area, nombre')
       .order('id');
 
@@ -24,8 +24,8 @@ router.get('/', async (req: Request, res: Response) => {
 
     res.json(data);
   } catch (error) {
-    console.error('Error fetching categorias:', error);
-    res.status(500).json({ error: 'Failed to fetch categorias' });
+    console.error('Error fetching categoria:', error);
+    res.status(500).json({ error: 'Failed to fetch categoria' });
   }
 });
 

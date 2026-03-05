@@ -7,7 +7,7 @@ const router = Router();
 router.get('/', async (_req: Request, res: Response) => {
   try {
     const { data, error } = await supabase
-      .from('areas')
+      .from('area')
       .select('id, nombre')
       .order('id');
 
@@ -15,8 +15,8 @@ router.get('/', async (_req: Request, res: Response) => {
 
     res.json(data);
   } catch (error) {
-    console.error('Error fetching areas:', error);
-    res.status(500).json({ error: 'Failed to fetch areas' });
+    console.error('Error fetching area:', error);
+    res.status(500).json({ error: 'Failed to fetch area' });
   }
 });
 
