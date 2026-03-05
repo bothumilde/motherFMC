@@ -10,7 +10,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: './', // Necesario para Azure App Service
+  base: '/',
   server: {
     port: 3000,
     open: false,
