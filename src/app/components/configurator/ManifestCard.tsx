@@ -66,14 +66,14 @@ export const ManifestCard: React.FC<ManifestCardProps> = ({
     <div className="w-full max-w-2xl">
       <div className="flex justify-between items-end mb-4 px-2">
         <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-          <FileText className="w-4 h-4" /> Configuration Manifest
+          <FileText className="w-4 h-4" /> Ficha de proyecto
         </h2>
         <button 
           onClick={onClear}
           className="text-xs text-red-400 hover:text-red-300 flex items-center gap-1 transition-opacity disabled:hidden"
           disabled={progress === 0}
         >
-          <Trash2 className="w-3 h-3" /> Clear All
+          <Trash2 className="w-3 h-3" /> Limpiar
         </button>
       </div>
 
@@ -83,11 +83,11 @@ export const ManifestCard: React.FC<ManifestCardProps> = ({
         {/* Encabezado con datos del registro */}
         <div className="bg-slate-950/50 border-b border-slate-800 px-8 py-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] uppercase tracking-wider text-slate-500">
           <div className="truncate">
-            <span className="block font-bold text-slate-400 mb-0.5">Structure ID</span>
+            <span className="block font-bold text-slate-400 mb-0.5">Estructura</span>
             <span className="truncate">{registrationData.estructura}</span>
           </div>
           <div className="truncate">
-            <span className="block font-bold text-slate-400 mb-0.5">Series</span>
+            <span className="block font-bold text-slate-400 mb-0.5">Serie</span>
             <span className="truncate">{registrationData.serie}</span>
           </div>
           <div className="truncate">
@@ -109,8 +109,8 @@ export const ManifestCard: React.FC<ManifestCardProps> = ({
                 className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-0 opacity-30 pointer-events-none"
               >
                 <Package className="w-16 h-16 text-slate-700 mb-4 stroke-1" />
-                <p className="text-slate-500 font-mono text-sm">AWAITING SPECIFICATION</p>
-                <p className="text-slate-600 text-xs mt-2 max-w-xs">Select components from the dock below to populate the manifest.</p>
+                <p className="text-slate-500 font-mono text-sm">Esperando atributos</p>
+                <p className="text-slate-600 text-xs mt-2 max-w-xs">Selecciona los atributos de la unidad según la OP</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -125,12 +125,6 @@ export const ManifestCard: React.FC<ManifestCardProps> = ({
               />
             ))}
           </div>
-
-          <div className="mt-8 pt-6 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500 font-mono">
-            <span>UNIT ID: #PROD-{Math.floor(Math.random() * 9000) + 1000}</span>
-            <span>{new Date().toLocaleDateString()}</span>
-          </div>
-
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-9xl font-black text-slate-950 select-none pointer-events-none z-[-1] opacity-50 rotate-[-15deg]">
             SPEC
           </div>
@@ -139,7 +133,7 @@ export const ManifestCard: React.FC<ManifestCardProps> = ({
 
       <div className="mt-4 flex items-start gap-2 text-slate-500 text-xs max-w-lg mx-auto text-center">
         <Info className="w-4 h-4 shrink-0 mt-0.5" />
-        <p>Select items from the dock below to populate this manifest. Once complete, you can proceed to review.</p>
+        <p>Selecciona los atributos de la unidad. Una vez completo procede a revisar.</p>
       </div>
     </div>
   );
@@ -191,7 +185,7 @@ const ConfigSection: React.FC<ConfigSectionProps> = ({ regla, value }) => {
         </motion.div>
       ) : (
         <div className="h-16 border-2 border-dashed border-slate-800 rounded flex items-center justify-center text-slate-700 text-xs font-mono uppercase">
-          Pending Selection
+          Vacío
         </div>
       )}
     </div>

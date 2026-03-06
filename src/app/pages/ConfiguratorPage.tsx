@@ -35,7 +35,7 @@ export const ConfiguratorPage: React.FC<ConfiguratorPageProps> = ({
   } = useDynamicConfiguration(registrationData.id_categoria);
 
   const handleReview = async () => {
-    if (!isComplete || saving) return; // Añadido check de saving
+    if (!isComplete || saving) return;
     
     setSaving(true);
     setSaveError(null);
