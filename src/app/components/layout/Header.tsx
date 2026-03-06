@@ -19,21 +19,21 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="fixed top-0 w-full z-40 p-6 flex justify-between items-center bg-slate-950 border-b border-slate-900">
       <div className="flex flex-col">
         <h1 className="text-xl md:text-2xl font-black tracking-tighter text-white">
-          IRON<span className="text-cyan-500">CLAD</span>
+        FAME<span className="text-cyan-500">CA</span>
         </h1>
         <span className="text-[10px] md:text-xs font-medium text-slate-500 tracking-[0.2em] uppercase">
-          Spec Configurator
+          Registro maestro
         </span>
       </div>
       
       {registrationData && (
         <div className="hidden md:flex items-center gap-6 mr-4">
           <div className="flex flex-col items-end">
-            <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Project</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Estructura</span>
             <span className="text-xs font-mono text-slate-300">{registrationData.estructura}</span>
           </div>
           <div className="flex flex-col items-end">
-            <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Series</span>
+            <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Serie</span>
             <span className="text-xs font-mono text-slate-300">{registrationData.serie}</span>
           </div>
           <div className="flex flex-col items-end">
@@ -64,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
             disabled={!isComplete}
           >
-            <span>Review Spec</span>
+            <span>Revisar registro</span>
             {isComplete ? <CheckCircle2 className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
           </button>
         </div>

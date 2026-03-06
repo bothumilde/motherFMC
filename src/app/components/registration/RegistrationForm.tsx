@@ -125,7 +125,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onComplete }
           {/* Estructura */}
           <div>
             <label className="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
-              Structure ID
+              Código de estructura
             </label>
             <div className="relative">
               <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
@@ -133,7 +133,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onComplete }
                 type="text"
                 value={data.estructura}
                 onChange={(e) => handleChange('estructura', e.target.value)}
-                placeholder="Ej: STR-2024-001"
+                placeholder="Ej: 6090L"
                 className={`w-full bg-slate-950 border rounded-lg py-3 pl-11 pr-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all ${
                   errors.estructura ? 'border-red-500' : 'border-slate-800'
                 }`}
@@ -161,7 +161,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onComplete }
                 type="text"
                 value={data.serie}
                 onChange={(e) => handleChange('serie', e.target.value)}
-                placeholder="Ej: Heavy Duty X1"
+                placeholder="Ej: 5841L"
                 className={`w-full bg-slate-950 border rounded-lg py-3 pl-11 pr-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all ${
                   errors.serie ? 'border-red-500' : 'border-slate-800'
                 }`}
@@ -189,7 +189,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onComplete }
                 type="text"
                 value={data.cliente}
                 onChange={(e) => handleChange('cliente', e.target.value)}
-                placeholder="Ej: Minera ABC"
+                placeholder="Ej: GLD TRANSPORT S.A.C."
                 className={`w-full bg-slate-950 border rounded-lg py-3 pl-11 pr-4 text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all ${
                   errors.cliente ? 'border-red-500' : 'border-slate-800'
                 }`}

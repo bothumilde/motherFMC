@@ -16,8 +16,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL,      // ej: https://motherfmc-....azurewebsites.net
-  'http://localhost:5173',       // solo si quieres permitir dev local
+  process.env.FRONTEND_URL,
+  'http://localhost:5173',
 ].filter(Boolean) as string[];
 
 app.use(

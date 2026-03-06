@@ -89,3 +89,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'BankGothic';
+  src: url('../assets/fonts/bankgothic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

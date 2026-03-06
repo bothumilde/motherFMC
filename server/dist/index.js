@@ -11,8 +11,8 @@ const supabase_js_1 = require("./config/supabase.js");
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 const allowedOrigins = [
-    process.env.FRONTEND_URL, // ej: https://motherfmc-....azurewebsites.net
-    'http://localhost:5173', // solo si quieres permitir dev local
+    process.env.FRONTEND_URL,
+    'http://localhost:5173',
 ].filter(Boolean);
 app.use((0, cors_1.default)({
     origin: (origin, callback) => {
